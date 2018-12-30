@@ -5,13 +5,15 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tuszcom.chat", "tuszcom.chat\tuszcom.chat.csproj", "{6E32C88C-2599-4AA3-8436-D01C0011FC70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tuszcom.migrations", "tuszcom.migrations\tuszcom.migrations.csproj", "{2DB2CE2D-EDE4-40B6-B1BE-11453BADCC21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tuszcom.migrations", "tuszcom.migrations\tuszcom.migrations.csproj", "{2DB2CE2D-EDE4-40B6-B1BE-11453BADCC21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tuszcom.models", "tuszcom.models\tuszcom.models.csproj", "{5D56A552-5C54-4F0F-8660-946903A73C24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tuszcom.models", "tuszcom.models\tuszcom.models.csproj", "{5D56A552-5C54-4F0F-8660-946903A73C24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tuszcom.manager", "tuszcom.manager\tuszcom.manager.csproj", "{3E1D7351-B09C-4967-94AA-E8DA83D36646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tuszcom.services", "tuszcom.manager\tuszcom.services.csproj", "{3E1D7351-B09C-4967-94AA-E8DA83D36646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tuszcom.dao", "tuszcom.dao\tuszcom.dao.csproj", "{B7B5C4D7-7DA4-4EAC-9D38-80AD1EE82312}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tuszcom.dao", "tuszcom.dao\tuszcom.dao.csproj", "{B7B5C4D7-7DA4-4EAC-9D38-80AD1EE82312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tuszcom.hub", "tuszcom.chat.hub\tuszcom.hub.csproj", "{7B25638B-B7EF-4088-84E3-EED078A06308}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B7B5C4D7-7DA4-4EAC-9D38-80AD1EE82312}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B5C4D7-7DA4-4EAC-9D38-80AD1EE82312}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B5C4D7-7DA4-4EAC-9D38-80AD1EE82312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B25638B-B7EF-4088-84E3-EED078A06308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B25638B-B7EF-4088-84E3-EED078A06308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B25638B-B7EF-4088-84E3-EED078A06308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B25638B-B7EF-4088-84E3-EED078A06308}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

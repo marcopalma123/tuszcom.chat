@@ -35,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\tuszcom.dao\tuszcom.dao.csproj" />
     <ProjectReference Include="..\tuszcom.migrations\tuszcom.migrations.csproj" />
     <ProjectReference Include="..\tuszcom.models\tuszcom.models.csproj" />
   </ItemGroup>

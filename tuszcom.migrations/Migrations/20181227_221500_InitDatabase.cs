@@ -11,7 +11,7 @@ namespace tuszcom.migrations.Migrations
         public override void Up()
         {
             Create.Table("ChatMessages")
-                .WithColumn("IdChatMessage").AsInt32().PrimaryKey()
+                .WithColumn("IdChatMessage").AsInt32().PrimaryKey().Identity()
                 .WithColumn("SenderUserId").AsString(450).ForeignKey("FK_ChatMessage_AspNetUsers_SenderUserId", "AspNetUsers", "Id").NotNullable()
                 .WithColumn("CustomerUserId").AsString(450).ForeignKey("FK_ChatMessage_AspNetUsers_CustomerUserId", "AspNetUsers", "Id").NotNullable()
                 .WithColumn("Message").AsString(int.MaxValue).NotNullable().WithDefaultValue(string.Empty)
@@ -20,13 +20,13 @@ namespace tuszcom.migrations.Migrations
                 .WithColumn("ConnectionId").AsString(200).NotNullable();
 
             Create.Table("ChatMessageFiles")
-                .WithColumn("IdChatMessageFile").AsInt32().PrimaryKey()
+                .WithColumn("IdChatMessageFile").AsInt32().PrimaryKey().Identity()
                 .WithColumn("Path").AsString(int.MaxValue).NotNullable()
                 .WithColumn("Name").AsString(150).NotNullable()
                 .WithColumn("ChatMessageId").AsInt32().NotNullable().ForeignKey("FK_ChatMessageFile_ChatMessages_Id", "ChatMessages", "IdChatMessage");
 
             Create.Table("ChatUserDetails")
-                .WithColumn("IdChatUserDetail").AsInt32().PrimaryKey()
+                .WithColumn("IdChatUserDetail").AsInt32().PrimaryKey().Identity()
                 .WithColumn("ConnectionId").AsString(200).NotNullable()
                 .WithColumn("UserId").AsString(450).ForeignKey("FK_ChatUserDetails_AspNetUsers_UserId", "AspNetUsers", "Id").NotNullable();
         }

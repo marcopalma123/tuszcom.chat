@@ -32,7 +32,7 @@ namespace tuszcom.chat
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<ChatDbContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<ApplicationRole>>();
 
