@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NLog.Web.AspNetCore" Version="4.7.0" />
+    <ProjectReference Include="..\tuszcom.dao\tuszcom.dao.csproj" />
+    <ProjectReference Include="..\tuszcom.models\tuszcom.models.csproj" />
   </ItemGroup>
 
 </Project>

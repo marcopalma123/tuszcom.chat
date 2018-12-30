@@ -8,9 +8,9 @@ using tuszcom.chat.Models;
 
 namespace tuszcom.chat.Data
 {
-    public class ChatDbContext : IdentityDbContext<ApplicationUser,ApplicationRole,string>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser,ApplicationRole,string>
     {
-        public ChatDbContext(DbContextOptions<ChatDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
         }

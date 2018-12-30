@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NLog.Web;
 using tuszcom.chat.Data;
 using tuszcom.chat.Models;
+using tuszcom.dao;
 
 namespace tuszcom.chat
 {
@@ -29,9 +30,9 @@ namespace tuszcom.chat
 
             #region Db
 
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<ChatDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<ChatDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<ChatDbContext>().AddDefaultTokenProviders();
+            services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             #endregion
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

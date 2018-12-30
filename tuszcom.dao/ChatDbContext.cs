@@ -26,6 +26,16 @@ namespace tuszcom.dao
             modelBuilder.Entity<ChatMessages>().ToTable("ChatMessages");
             modelBuilder.Entity<ChatMessageFiles>().ToTable("ChatMessageFiles");
             modelBuilder.Entity<ChatUserDetails>().ToTable("ChatUserDetails");
+            modelBuilder.Entity<ViewMessages>().ToTable("ViewMessages");
+            modelBuilder.Entity<AspNetUsers>().ToTable("AspNetUsers");
+            modelBuilder.Entity<Settings>().ToTable("Settings");
         }
+        public DbSet<ErrorLogs> ErrorLogs { get; set; }
+        public DbSet<ChatMessages> ChatMessages { get; set; }
+        public DbSet<ChatMessageFiles> ChatMessageFiles { get; set; }
+        public DbSet<ChatUserDetails> ChatUserDetails { get; set; }
+        public DbSet<ViewMessages> ViewMessages { get; set; }
+        public DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public DbSet<Settings> Settings { get; set; }
     }
 }

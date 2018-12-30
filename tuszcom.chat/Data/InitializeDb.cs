@@ -5,18 +5,19 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using tuszcom.chat.Models;
+using tuszcom.dao;
 
 namespace tuszcom.chat.Data
 {
     public class InitializeDb
     {
-        public async Task Initialize(ChatDbContext context, UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
+        public async Task Initialize(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
         {
             context.Database.EnsureCreated();
            await FirstConfigUserRoles(userManager, roleManager, context);
         }
 
-        private async Task CreateRole(string roleName, RoleManager<ApplicationRole> roleManager, ChatDbContext context)
+        private async Task CreateRole(string roleName, RoleManager<ApplicationRole> roleManager, ApplicationDbContext context)
         {
 
             Task<bool> roleExists = roleManager.RoleExistsAsync(roleName);
@@ -53,7 +54,7 @@ namespace tuszcom.chat.Data
         }
 
         public async Task FirstConfigUserRoles(UserManager<ApplicationUser> userManager,
-        RoleManager<ApplicationRole> roleManager, ChatDbContext context)
+        RoleManager<ApplicationRole> roleManager, ApplicationDbContext context)
         {
             string[] roleNames = { "SuperAdmin", "Administrator", "User" };
 
